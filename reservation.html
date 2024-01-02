@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal's Food | RESERVATION</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="logohamza.png" alt="logo" width="150px"></a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="menu.html">menu</a>
+            <a href="team.html">team</a>
+            <a href="reservation.html" class="active">reservation</a>
+            <a href="blog.html">blog</a>
+        </nav>
+        <div class="search-container">
+            <input class="ser" type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+          </div>
+    </header>
+    <section class="banner">
+        <h2>BOOK YOUR TABLE NOW</h2>
+        <div class="card-container">
+            
+
+            <div class="card-content">
+                <h3>Reservation</h3>
+                <form id="reservationForm">
+                    <div class="form-row">
+                        <select name="days">
+                            <option value = "day-select">Select Day</option>
+                            <option value = "sunday">Sunday</option>
+                            <option value = "monday">Monday</option>
+                            <option value = "tuesday">Tuesday</option>
+                            <option value = "wednesday">Wednesday</option>
+                            <option value = "thursday">Thursday</option>
+                            <option value = "friday">Friday</option>
+                            <option value = "saturday">Saturday</option>
+                        </select>
+
+                        <select name="hours">
+                            <option value = "hour-select">Select Hour</option>
+                            <option value = "10">10: 00</option>
+                            <option value = "10">12: 00</option>
+                            <option value = "10">14: 00</option>
+                            <option value = "10">16: 00</option>
+                            <option value = "10">18: 00</option>
+                            <option value = "10">20: 00</option>
+                            <option value = "10">22: 00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" id="fullName" placeholder="Full Name">
+                        <input type="text" id="phoneNumber" placeholder="Phone Number">
+                    </div>
+
+                    <div class="form-row">
+                        <input type="number" id="numPersons" placeholder="How Many Persons?" min="1">
+                        <input type="submit" value="BOOK TABLE">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <br>
+            <img src="logohamza.png" alt="LOGO" width="200px">
+            <div class="container">
+                <div>
+                    <h3>ABOUT US</h3>
+                    <p>At Royal's Food, we believe the food and people are what make a place special. It is our honor to continue serving this community that has supported us for so many years. We hope you'll stop by soon and experience the care, quality and hospitality that our loyal customers keep coming back for, time and time again.</p>
+                </div>
+                    <div>
+                    <h3>GET NEWS AND OFFERS</h3>
+                    <input type="email" placeholder="Enter your Email">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>CONTACT US</h3>
+                    <span>BSE 1-C Project BUKC</span>
+                    <span>+92 327 27*****</span>
+                    <span>project****@gmail.com</span>
+                    <span>www.royals_food.com</span>
+                    <span>BY SYED HAMZA AFZAAL & SUFIYAN MAQSOOD</span>
+                </div>
+            </div>
+            <p>&copy;2023 | All rights reserved</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("reservationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var fullName = document.getElementById("fullName").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var numPersons = document.getElementById("numPersons").value;
+
+            if (fullName.trim() === "" || phoneNumber.trim() === "" || numPersons.trim() === "") {
+                alert("Please fill in all required fields.");
+                return;
+            }
+            else{
+                alert("YOUR TABLE IS RESERVED!..DETAILS SEND TO YOUR PHONE NUMBER")
+            }
+        });
+        
+    </script>
+</body>
+</html>
